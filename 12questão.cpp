@@ -1,20 +1,17 @@
-// Example program
 #include <iostream>
-#include <string>
 using namespace std;
 
-int dobro (int *x){
-    int num = *x;
-    int dob = num * 2;
-    return dob;
-}
+  void  pont (int num){
+        cout << "O dobro do numero: " << num *2 << endl;
+    }
 
-int main()
-{
-  int num1;
-  cout << "Informe um numero: ";
-  cin >> num1;
-  int res = dobro(&num1);
-  cout << "O valor dobrado e " << res << endl;
-  return 0;
+int main() {
+    int num1;
+    int *ptr = &num1;
+    
+    cout<<"informe um valor: "<<endl;
+    cin>>num1;
+    
+    pont(*ptr);
+    return 0;
 }
